@@ -46,7 +46,7 @@ find: 25
 output: 0
  */
 
-let numbers = [5, 6, 11, 12, 98, 5, 11, 5];
+let numbers = [5, 6, 11, 12, 98, 5, 11];
 // console.log(numbers.indexOf(5) === numbers.lastIndexOf(5));
 let findVal = 5;
 
@@ -58,3 +58,40 @@ function countRepeat(arr) {
 let arrOfNum = countRepeat(numbers);
 // console.log(arrOfNum);
 console.log(arrOfNum.length);
+
+// ! Task 3
+/* Write a function to count the number of vowels in a string. */
+
+let sentence = "i love programming hero practice task. do u like?";
+
+/* function countVowels(sentence) {
+  // let vowel = "a" || "e" || "i" || "o" || "u";
+  let result = sentence.split("").filter((val) => "a" || "e" === val);
+  console.log(result);
+}
+
+countVowels(sentence);
+ */
+
+// !Task-4:
+/*Write a function to find the longest word in a given string. sample-input: I am learning Programming to become a programmer
+
+sample-output: Programming
+ */
+
+let topic = "I am learning Programming to become a programmer";
+// console.log(topic.split(" "));
+
+function findLongestWord(sentence) {
+  let sentenceConToArr = sentence.split(" ");
+  let longWord = "";
+  for (let word of sentenceConToArr) {
+    if (word.length > longWord.length) {
+      longWord.length = word.length;
+      longWord = word;
+    }
+  }
+  console.log(longWord);
+}
+
+findLongestWord(topic);
