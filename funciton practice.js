@@ -2,7 +2,7 @@
 ! Make a function to calculate the height of a person in ...feet ...inch format
   */
 
-let person = prompt("Enter Your Name: ");
+/* let person = prompt("Enter Your Name: ");
 let heightInInch = parseInt(prompt("Enter Height in Inches:", 0));
 
 function inchToFt(inch) {
@@ -17,7 +17,7 @@ function inchToFt(inch) {
 
 let height = inchToFt(heightInInch);
 
-console.log(`${person} is ${height}`);
+console.log(`${person} is ${height}`); */
 
 /* 
 !Task-1:
@@ -46,18 +46,15 @@ find: 25
 output: 0
  */
 
-let numbers = [5, 6, 11, 12, 98, 5];
+let numbers = [5, 6, 11, 12, 98, 5, 11, 5];
+// console.log(numbers.indexOf(5) === numbers.lastIndexOf(5));
+let findVal = 5;
 
 function countRepeat(arr) {
-  let dupArr = [];
-
-  for (const number of arr) {
-    if (dupArr.includes(number) === false) {
-      dupArr.push(number);
-    }
-  }
-  return arr.length - dupArr.length;
+  let findDup = arr.filter((val) => findVal === val);
+  return findDup;
 }
 
 let arrOfNum = countRepeat(numbers);
-console.log(arrOfNum);
+// console.log(arrOfNum);
+console.log(arrOfNum.length);
