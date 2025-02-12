@@ -59,7 +59,7 @@ let arrOfNum = countRepeat(numbers);
 // console.log(arrOfNum);
 console.log(arrOfNum.length);
 
-// ! Task 3
+// ! Task 3 (Skipped)
 /* Write a function to count the number of vowels in a string. */
 
 let sentence = "i love programming hero practice task. do u like?";
@@ -95,3 +95,14 @@ function findLongestWord(sentence) {
 }
 
 findLongestWord(topic);
+
+//! Task-5:
+/* 
+Generate a random number between 10 to 20.
+*/
+function createRanNum(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+let random = createRanNum(10, 20);
+console.log(random);
