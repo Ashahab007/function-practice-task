@@ -137,3 +137,29 @@ function createRanNum(min, max) {
 
 let random = createRanNum(10, 20);
 console.log("Random number (10 - 20) is now", random);
+
+/* Calculate the average of even numbers from a given array */
+
+const myArr = [10, 25, 15, 24, 8, 30, 17, 37, 40];
+
+function evenNumAvg(array) {
+  let evens = [];
+  for (const number of array) {
+    if (number % 2 === 0) {
+      evens.push(number);
+    }
+  }
+  // console.log(evens);
+
+  // Calculate the average of even number's array
+  let sum = 0;
+  let len = evens.length;
+  for (const even of evens) {
+    sum = sum + even;
+  }
+  let average = sum / len;
+  return average;
+}
+
+const avgOfEven = evenNumAvg(myArr);
+console.log("Average of even number array is: ", avgOfEven);
