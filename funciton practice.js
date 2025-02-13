@@ -151,7 +151,7 @@ function evenNumAvg(array) {
   }
   // console.log(evens);
 
-  // Calculate the average of even number's array
+  // Calculate the average of array of even numbers
   let sum = 0;
   let len = evens.length;
   for (const even of evens) {
