@@ -138,7 +138,7 @@ function createRanNum(min, max) {
 let random = createRanNum(10, 20);
 console.log("Random number (10 - 20) is now", random);
 
-/* Calculate the average of even numbers from a given array */
+//! Calculate the average of even numbers from a given array
 
 const myArr = [10, 25, 15, 24, 8, 30, 17, 37, 40];
 
@@ -151,7 +151,7 @@ function evenNumAvg(array) {
   }
   // console.log(evens);
 
-  // Calculate the average of array of even numbers
+  //  average calculation from array of even numbers
   let sum = 0;
   let len = evens.length;
   for (const even of evens) {
@@ -164,7 +164,7 @@ function evenNumAvg(array) {
 const avgOfEven = evenNumAvg(myArr);
 console.log("Average of even number array is: ", avgOfEven);
 
-/* Remove duplicate numbers from an array */
+//! Remove duplicate numbers from an array
 
 const myArray = [15, 25, 10, 15, 37, 10];
 
@@ -180,3 +180,36 @@ function removdupli(arr) {
 
 const uniqueArr = removdupli(myArray);
 console.log(uniqueArr);
+
+// ! Make a lottery game using Math.random() and select the winner name from an array
+
+const lotteryCandidates = [
+  "Akib",
+  "Rakib",
+  "Sakib",
+  "Hasib",
+  "Munir",
+  "Tomal",
+  "Pappu",
+  "Tanif",
+  "Jhankar",
+  "Gias",
+  "Sumit",
+];
+
+// console.log(lotteryCandidates[0]);
+
+function createRanNum(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+let randomNum = createRanNum(0, lotteryCandidates.length - 1);
+// console.log(randomNum);
+
+function playLottery(params) {
+  let winner = `Lottery winner is ${params[randomNum]}`;
+  return winner;
+}
+
+const playLotteryGame = playLottery(lotteryCandidates);
+console.log(playLotteryGame);
