@@ -57,21 +57,31 @@ function countRepeat(arr) {
 
 let arrOfNum = countRepeat(numbers);
 // console.log(arrOfNum);
-console.log(arrOfNum.length);
+console.log(`The input number ${findVal} is ${arrOfNum.length} times.`);
 
-// ! Task 3 (Skipped)
+// ! Task 3
 /* Write a function to count the number of vowels in a string. */
 
 let sentence = "i love programming hero practice task. do u like?";
 
-/* function countVowels(sentence) {
-  // let vowel = "a" || "e" || "i" || "o" || "u";
-  let result = sentence.split("").filter((val) => "a" || "e" === val);
-  console.log(result);
+function countVowels(sentence) {
+  let count = 0;
+  for (const word of sentence) {
+    if (
+      word === "a" ||
+      word === "e" ||
+      word === "i" ||
+      word === "o" ||
+      word === "u"
+    ) {
+      count++;
+    }
+  }
+  return count;
 }
 
-countVowels(sentence);
- */
+let vowelCounterApp = countVowels(sentence);
+console.log("The sentence contains", vowelCounterApp, "vowels.");
 
 // !Task-4:
 /*Write a function to find the longest word in a given string. sample-input: I am learning Programming to become a programmer
@@ -91,7 +101,7 @@ function findLongestWord(sentence) {
       longWord = word;
     }
   }
-  console.log(longWord);
+  console.log("The long word is: ", longWord);
 }
 
 findLongestWord(topic);
@@ -105,4 +115,4 @@ function createRanNum(min, max) {
 }
 
 let random = createRanNum(10, 20);
-console.log(random);
+console.log("Random number (10 - 20) is now", random);
