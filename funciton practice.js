@@ -163,3 +163,20 @@ function evenNumAvg(array) {
 
 const avgOfEven = evenNumAvg(myArr);
 console.log("Average of even number array is: ", avgOfEven);
+
+/* Remove duplicate numbers from an array */
+
+const myArray = [15, 25, 10, 15, 37, 10];
+
+function removdupli(arr) {
+  const unique = [];
+  for (const element of arr) {
+    if (unique.includes(element) === false) {
+      unique.push(element);
+    }
+  }
+  return unique;
+}
+
+const uniqueArr = removdupli(myArray);
+console.log(uniqueArr);
